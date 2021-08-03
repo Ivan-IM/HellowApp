@@ -8,9 +8,15 @@
 import SwiftUI
 
 struct ContentView: View {
+    @StateObject var user = UserManager()
+    
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        if user.showRegistrationView {
+            RegistrationView(user: user)
+        }
+        else {
+            TimerView(user: user)
+        }
     }
 }
 
