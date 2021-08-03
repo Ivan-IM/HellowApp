@@ -12,9 +12,8 @@ struct RegistrationView: View {
     
     var body: some View {
         ZStack {
-            AngularGradient(gradient: user.gradient, center: .bottomLeading, angle: .degrees(90))
-                .opacity(0.5)
-                .ignoresSafeArea()
+            BackgroundView()
+                .opacity(0.7)
             VStack {
                 TextRegView(user: user)
                 ButtonRegView(user: user)

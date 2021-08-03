@@ -18,6 +18,7 @@
 		CF1B39D826B9359900D45DD6 /* ButtonRegView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF1B39D726B9359900D45DD6 /* ButtonRegView.swift */; };
 		CF1B39DA26B944DD00D45DD6 /* TextRegView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF1B39D926B944DD00D45DD6 /* TextRegView.swift */; };
 		CF1B39DC26B9556E00D45DD6 /* ButtonTimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF1B39DB26B9556E00D45DD6 /* ButtonTimerView.swift */; };
+		CF1B39DE26B98C9200D45DD6 /* BackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF1B39DD26B98C9200D45DD6 /* BackgroundView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		CF1B39D726B9359900D45DD6 /* ButtonRegView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonRegView.swift; sourceTree = "<group>"; };
 		CF1B39D926B944DD00D45DD6 /* TextRegView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextRegView.swift; sourceTree = "<group>"; };
 		CF1B39DB26B9556E00D45DD6 /* ButtonTimerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonTimerView.swift; sourceTree = "<group>"; };
+		CF1B39DD26B98C9200D45DD6 /* BackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +73,7 @@
 				CF1B39CC26B92DEF00D45DD6 /* Manager */,
 				CF1B39BD26B92DE700D45DD6 /* HellowAppApp.swift */,
 				CF1B39BF26B92DE700D45DD6 /* ContentView.swift */,
+				CF1B39DD26B98C9200D45DD6 /* BackgroundView.swift */,
 				CF1B39C126B92DE900D45DD6 /* Assets.xcassets */,
 				CF1B39C626B92DE900D45DD6 /* Info.plist */,
 				CF1B39C326B92DE900D45DD6 /* Preview Content */,
@@ -183,6 +186,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CF1B39DE26B98C9200D45DD6 /* BackgroundView.swift in Sources */,
 				CF1B39D626B9327B00D45DD6 /* TimerView.swift in Sources */,
 				CF1B39CE26B92E0E00D45DD6 /* UserManager.swift in Sources */,
 				CF1B39DC26B9556E00D45DD6 /* ButtonTimerView.swift in Sources */,

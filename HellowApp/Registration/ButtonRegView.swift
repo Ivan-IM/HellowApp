@@ -15,8 +15,9 @@ struct ButtonRegView: View {
             user.showRegistration()
         }, label: {
             HStack {
-                Image(systemName: "checkmark.circle")
                 Text("OK")
+                    .bold()
+                Image(systemName: "chevron.right.circle")
             }
         }).disabled(user.showButtonView)
         .padding()

@@ -9,7 +9,6 @@ import SwiftUI
 
 struct ButtonTimerView: View {
     @Binding var title: String
-    var gradient: Gradient
     var action: () -> Void
     var cleanAction: () -> Void
     
@@ -17,14 +16,15 @@ struct ButtonTimerView: View {
         HStack {
             Button(action: action, label: {
                 Text(title)
-                    .foregroundColor(Color.black)
+                    .foregroundColor(Color(.systemBlue))
                     .font(/*@START_MENU_TOKEN@*/.title/*@END_MENU_TOKEN@*/)
                     .bold()
             })
-            .frame(width: 200, height: 60, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
-            .background(LinearGradient(gradient: gradient, startPoint: .topLeading, endPoint: .bottomTrailing))
+            .frame(width: 150, height: 50, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
             .cornerRadius(25)
-            .shadow(color: Color(.systemBlue), radius: 5, x: /*@START_MENU_TOKEN@*/0.0/*@END_MENU_TOKEN@*/, y: /*@START_MENU_TOKEN@*/0.0/*@END_MENU_TOKEN@*/)
+            .overlay(Capsule().stroke(Color(.systemBlue), lineWidth: 5))
+            .opacity(0.8)
+            
             Spacer()
             Button(action: cleanAction, label: {
                 Text("Logout")

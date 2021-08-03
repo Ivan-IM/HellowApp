@@ -21,8 +21,6 @@ class UserManager: ObservableObject {
     @Published var showRegistrationView: Bool = true
     @Published var showButtonView: Bool = true
     
-    var gradient = Gradient(colors: [Color(.systemTeal), Color(.systemBlue), Color(.white), Color(.systemTeal)])
-    
     func validator(_ value: String) -> String {
         name = value
         symbols = name.count

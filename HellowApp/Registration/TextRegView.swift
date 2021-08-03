@@ -22,13 +22,23 @@ struct TextRegView: View {
             })
             .multilineTextAlignment(.center)
             .frame(width: 250)
-            Text("\(user.symbols)")
-                .foregroundColor(user.showButtonView ? Color.red:Color.blue)
-                .multilineTextAlignment(.center)
-                .frame(width: 50)
+            .offset(x: 25)
+            
+            ZStack {
+                Text("\(user.symbols)")
+                    .foregroundColor(Color.red)
+                    .multilineTextAlignment(.center)
+                    .opacity(user.showButtonView ? 1:0)
+                
+                Image(systemName: "checkmark.circle")
+                    .foregroundColor(Color(.systemBlue))
+                    .opacity(user.showButtonView ? 0:1)
+                    
+                    
+            }.frame(width: 50)
         }
         .frame(width: 315, height: 50, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
-        .overlay(Capsule().stroke(AngularGradient(gradient: user.gradient, center: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/), lineWidth: 8))
+        .overlay(Capsule().stroke(Color(.systemBlue), lineWidth: 3).opacity(0.5))
     }
 }
 
