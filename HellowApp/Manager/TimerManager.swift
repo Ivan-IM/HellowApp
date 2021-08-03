@@ -9,12 +9,12 @@ import Foundation
 import SwiftUI
 
 class TimerManager: ObservableObject {
-
+    
     @Published var counter = 5
     @Published var buttonTitle = "Start"
     @Published var showImage = false
     private var timer: Timer?
-
+    
     func startTimer() {
         if counter > 0 {
             timer = Timer.scheduledTimer(
@@ -27,7 +27,7 @@ class TimerManager: ObservableObject {
         }
         buttonDidTapped()
     }
-
+    
     private func buttonDidTapped() {
         if buttonTitle == "Reset" {
             counter = 5
@@ -37,7 +37,7 @@ class TimerManager: ObservableObject {
             buttonTitle = "Wait..."
         }
     }
-
+    
     @objc private func updateCounter() {
         if counter > 0 {
             counter -= 1
@@ -47,7 +47,7 @@ class TimerManager: ObservableObject {
             buttonTitle = "Reset"
         }
     }
-
+    
     private func killTimer() {
         timer?.invalidate()
         timer = nil

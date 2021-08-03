@@ -9,6 +9,7 @@ import SwiftUI
 
 struct RegistrationView: View {
     @ObservedObject var user: UserManager
+    @State var showingView = false
     
     var body: some View {
         ZStack {
@@ -17,6 +18,11 @@ struct RegistrationView: View {
             VStack {
                 TextRegView(user: user)
                 ButtonRegView(user: user)
+            }
+            .opacity(showingView ? 1:0)
+            .animation(Animation.easeIn(duration: 1))
+            .onAppear() {
+                showingView.toggle()
             }
         }
         .onTapGesture {

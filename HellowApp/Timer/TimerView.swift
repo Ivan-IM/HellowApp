@@ -10,6 +10,7 @@ import SwiftUI
 struct TimerView: View {
     @StateObject var timer = TimerManager()
     @ObservedObject var user: UserManager
+    @State var showingView = false
     
     var body: some View {
         ZStack {
@@ -40,6 +41,11 @@ struct TimerView: View {
                 ButtonTimerView(title: $timer.buttonTitle, action: timer.startTimer, cleanAction: user.clear)
             }
             .padding()
+            .opacity(showingView ? 1:0)
+            .animation(Animation.easeIn(duration: 1))
+            .onAppear() {
+                showingView.toggle()
+            }
         }
     }
 }

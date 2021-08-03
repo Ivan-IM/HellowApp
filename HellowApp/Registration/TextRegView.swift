@@ -33,8 +33,8 @@ struct TextRegView: View {
                 Image(systemName: "checkmark.circle")
                     .foregroundColor(Color(.systemBlue))
                     .opacity(user.showButtonView ? 0:1)
-                    
-                    
+                
+                
             }.frame(width: 50)
         }
         .frame(width: 315, height: 50, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
