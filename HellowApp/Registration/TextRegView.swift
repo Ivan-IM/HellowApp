@@ -23,12 +23,12 @@ struct TextRegView: View {
             .multilineTextAlignment(.center)
             .frame(width: 250)
             Text("\(user.symbols)")
+                .foregroundColor(user.showButtonView ? Color.red:Color.blue)
                 .multilineTextAlignment(.center)
                 .frame(width: 50)
         }
         .frame(width: 315, height: 50, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
         .overlay(Capsule().stroke(AngularGradient(gradient: user.gradient, center: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/), lineWidth: 8))
-        .shadow(color: Color(.systemBlue), radius: 5, x: /*@START_MENU_TOKEN@*/0.0/*@END_MENU_TOKEN@*/, y: /*@START_MENU_TOKEN@*/0.0/*@END_MENU_TOKEN@*/)
     }
 }
 
