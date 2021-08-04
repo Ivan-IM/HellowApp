@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct ButtonRegView: View {
-    @ObservedObject var user: UserManager
+    @EnvironmentObject var user: UserManager
     
     var body: some View {
         Button(action: {
@@ -26,6 +26,6 @@ struct ButtonRegView: View {
 
 struct ButtonRegView_Previews: PreviewProvider {
     static var previews: some View {
-        ButtonRegView(user: UserManager())
+        ButtonRegView().environmentObject(UserManager())
     }
 }

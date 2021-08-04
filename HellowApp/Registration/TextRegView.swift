@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct TextRegView: View {
-    @ObservedObject var user: UserManager
+    @EnvironmentObject var user: UserManager
     
     var body: some View {
         HStack {
@@ -44,6 +44,6 @@ struct TextRegView: View {
 
 struct TextRegView_Previews: PreviewProvider {
     static var previews: some View {
-        TextRegView(user: UserManager())
+        TextRegView().environmentObject(UserManager())
     }
 }

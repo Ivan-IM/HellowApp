@@ -12,7 +12,7 @@ struct BackgroundView: View {
     
     var body: some View {
         ZStack {
-            RadialGradient(gradient: Gradient(colors: [Color(.systemPink), Color(.systemPurple), Color(.systemTeal), Color(.systemPink)]), center: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/, startRadius: /*@START_MENU_TOKEN@*/5/*@END_MENU_TOKEN@*/, endRadius: 500)
+            RadialGradient(gradient: Gradient(colors: [Color(.systemPink), Color(.systemPurple), Color(.systemTeal)]), center: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/, startRadius: /*@START_MENU_TOKEN@*/5/*@END_MENU_TOKEN@*/, endRadius: 300)
                 .scaleEffect(animate ? 1:1.5)
             
             LinearGradient(gradient: Gradient(colors: [Color.white.opacity(0), Color.white.opacity(1)]), startPoint: .bottom, endPoint: .top)

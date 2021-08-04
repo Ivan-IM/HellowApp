@@ -8,20 +8,38 @@
 import SwiftUI
 
 struct ContentView: View {
-    @StateObject var user = UserManager()
+    @EnvironmentObject var user: UserManager
     
     var body: some View {
-        if user.showRegistrationView {
-            RegistrationView(user: user)
+        ZStack {
+            BackgroundView()
+                .opacity(/*@START_MENU_TOKEN@*/0.8/*@END_MENU_TOKEN@*/)
+            if user.showRegistrationView {
+                RegistrationView()
+            }
+            else {
+                TimerView()
+            }
         }
-        else {
-            TimerView(user: user)
+        .onTapGesture {
+            UIApplication.shared.endEditing()
         }
     }
 }
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        ContentView().environmentObject(UserManager())
+    }
+}
+
+extension UIApplication {
+    func endEditing() {
+        sendAction(
+            #selector(UIResponder.resignFirstResponder),
+            to: nil,
+            from: nil,
+            for: nil
+        )
     }
 }
